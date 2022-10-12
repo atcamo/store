@@ -13,7 +13,7 @@ const validarProductoRepetido = (productoId) => {
     const productoRepetido = carrito.find(producto => producto.id === productoId);
 
     if (productoRepetido) {
-        productoRepetido.cantidad++;
+        productoRepetido.cantidad++;  /*operador avanzado*/
         const cantidadProducto = document.getElementById(`cantidad${productoRepetido.id}`);
         cantidadProducto.innerText = `cantidad: ${productoRepetido.cantidad}`;
         actualizarTotalesCarrito(carrito);
