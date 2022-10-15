@@ -21,6 +21,14 @@ const mostrarProductos = (productos) => {
     const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener('click', () => {
       validarProductoRepetido(producto.id);
+      Swal.fire({
+        position: 'mid-end',
+        icon: 'success',
+        title: 'Se agrego un produto a su carro',
+        showConfirmButton: false,
+        timer: 1500
+      })
+
     })
   });
 };

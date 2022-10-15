@@ -176,3 +176,17 @@ select {
 .boton-eliminar:focus {
   outline: none;
 }
+
+.toaster {
+  display: flex ;
+  position: absolute;
+  background: #383;
+  min-width: 300px;
+  min-height: 30px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  bottom: 70px;
+  right: 30px;
+  border: 2px solid whitesmoke;
+
+}
