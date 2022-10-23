@@ -16,13 +16,7 @@ const validarProductoRepetido = (productoId) => {
         const cantidadProducto = document.getElementById(`cantidad${productoRepetido.id}`);
         cantidadProducto.innerText = `cantidad: ${productoRepetido.cantidad}`;
         actualizarTotalesCarrito(carrito);
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Your work has been saved',
-            showConfirmButton: false,
-            timer: 1500
-          })
+
     } else {
         agregarAlCarrito(productoId);
     }

@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "nombre": "Knox",
+        "tipo": "Fragata",
+        "precio": 10,
+        "img": "public/images/Knox.png",
+        "cantidad":1
+    },
+
+    {
+        "id": 2,
+        "nombre": "Oliver",
+        "tipo": "Fragata",
+        "precio": 50,
+        "img": "public/images/Oliver.png",
+        "cantidad":1
+    },
+
+    {
+        "id": 3,
+        "nombre": "Duque",
+        "tipo": "Fragata",
+        "precio": 100,
+        "img": "public/images/Duque.png",
+        "cantidad":1
+    },
+
+    {
+        "id": 4,
+        "nombre": "Independence",
+        "tipo": "Fragata",
+        "precio": 160,
+        "img": "public/images/Independence.png",
+        "cantidad":1
+    }
+]
