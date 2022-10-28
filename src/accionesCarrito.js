@@ -1,6 +1,6 @@
 import { actualizarTotalesCarrito } from './actualizarCarrito.js';
-import { productos } from './stock.js';
 import { obtenerCarritoStorage } from './storage.js';
+import { productos } from './stock.js';
 
 let carrito = [];
 
@@ -58,10 +58,31 @@ const pintarCarrito = (carrito) => {
 
 const eliminarProductoCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
-    const carritoActualizado = carritoStorage.filter(producto => producto.id != productoId);
+    
+    Swal.fire({
+                text: 'Va a eliminar el producto!',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Eliminar',
+                cancelButtonText: 'Cancelar',
+                title: 'Esta seguro?'
+// confirmar eliminacion
 
-    actualizarTotalesCarrito(carritoActualizado);
-    pintarCarrito(carritoActualizado);
+            }).then((result) => {
+                if (result.isConfirmed) {
+                            
+                Swal.fire(
+                'Eliminado!',
+                'El producto ha sido eliminado.',
+                'success');
+
+                    actualizarTotalesCarrito(carritoActualizado);
+                    pintarCarrito(carritoActualizado) ;   }      
+                 });
+        const carritoActualizado = carritoStorage.filter(producto => producto.id != productoId);
+
 };
 
 export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito };

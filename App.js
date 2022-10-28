@@ -1,6 +1,5 @@
 import { validarProductoRepetido } from "./src/accionesCarrito.js";
 import { obtenerBuques } from "./src/obtenerBuques.js";
-
 const mostrarProductos = async () => {
   const contenedorProductos = document.getElementById("producto-contenedor");
 
@@ -24,15 +23,16 @@ const mostrarProductos = async () => {
     const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener('click', () => {
       validarProductoRepetido(producto.id);
-      Swal.fire({
-        position: 'mid-end',
-        icon: 'success',
-        title: 'Se agrego un produto a su carro',
-        showConfirmButton: false,
-        timer: 1500
+      Toastify({
+        text:'Se Agrego un porducto al carro',
+        duraction: 3000, 
+        gravity:'bottom',
+        stopOnFocus: true,
+        style: {
+                background: '#325320'
+               }
+      }).showToast();
       })
-
-    })
   });
 };
 
